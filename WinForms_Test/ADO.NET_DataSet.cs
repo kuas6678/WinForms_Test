@@ -26,7 +26,7 @@ namespace WinForms_Test
             SqlConnection Conn = new SqlConnection();
             Conn.ConnectionString = "Data Source=DESKTOP-71FRJMO;Initial Catalog=kkk;Integrated Security=True";
             Conn.Open();
-            SqlDataAdapter daEmp = new SqlDataAdapter("Select * From Test Order By id Desc", Conn);
+            SqlDataAdapter daEmp = new SqlDataAdapter("Select * From Test Order By id Asc", Conn);
             daEmp.Fill(ds, "SQLQuery1");
             daEmp.Dispose();
             Conn.Close();
